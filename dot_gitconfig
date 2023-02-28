@@ -1,0 +1,8 @@
+[user]
+	name = "Gianmarco Folchi "
+	email = gmfolc@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = /Users/gianmarcof/.gitignore_global
+[alias]
+	graph = log --all --graph --decorate
