@@ -11,7 +11,6 @@ alias find="fd"
 alias gs="git status"
 alias mv="mv -i"
 alias ns="npm start" 
-
 #My Exports
 #React Native (Visual Studio)
 # export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
