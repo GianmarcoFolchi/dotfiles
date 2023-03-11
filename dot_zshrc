@@ -16,6 +16,8 @@ alias ns="npm start"
 # export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 # export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export EDITOR='/opt/homebrew/bin/nvim'
+export VISUAL='/opt/homebrew/bin/nvim'
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
