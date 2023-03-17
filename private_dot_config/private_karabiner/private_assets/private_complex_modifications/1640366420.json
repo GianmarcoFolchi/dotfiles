@@ -244,22 +244,6 @@
       ]
     },
     {
-      "description": "Open Screenshot.app with Print_Screen key",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "print_screen"
-          },
-          "to": [
-            {
-              "shell_command": "open -a screenshot.app"
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
       "description": "Hyper + i/j/k/l == vim directional Keys",
       "manipulators": [
         {
@@ -379,7 +363,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'notion.app'"
+              "shell_command": "open -a 'Notes.app'"
             }
           ],
           "type": "basic"
@@ -421,70 +405,7 @@
               }
             },
             {
-              "shell_command": "open -a 'notion.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "m",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'mail.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "m"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'mail.app'"
+              "shell_command": "open -a 'Notes.app'"
             }
           ],
           "type": "basic"
@@ -505,7 +426,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Brave Browser Beta.app'"
+              "shell_command": "open -a 'Safari.app'"
             }
           ],
           "type": "basic"
@@ -547,7 +468,7 @@
               }
             },
             {
-              "shell_command": "open -a 'spotify.app'"
+              "shell_command": "open -a 'Safari.app'"
             }
           ],
           "type": "basic"
@@ -561,14 +482,14 @@
             }
           ],
           "from": {
-            "key_code": "b",
+            "key_code": "r",
             "modifiers": {
               "mandatory": []
             }
           },
           "to": [
             {
-              "shell_command": "open -a 'Brave Browser Beta.app'"
+              "shell_command": "open -a 'Reminders.app'"
             }
           ],
           "type": "basic"
@@ -583,7 +504,7 @@
                 "key_code": "o"
               },
               {
-                "key_code": "b"
+                "key_code": "r"
               }
             ],
             "simultaneous_options": {
@@ -610,7 +531,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Brave Browser Beta.app'"
+              "shell_command": "open -a 'Reminders.app'"
             }
           ],
           "type": "basic"
@@ -624,14 +545,14 @@
             }
           ],
           "from": {
-            "key_code": "a",
+            "key_code": "m",
             "modifiers": {
               "mandatory": []
             }
           },
           "to": [
             {
-              "shell_command": "open -a 'Activity Monitor.app'"
+              "shell_command": "open -a 'Spotify.app'"
             }
           ],
           "type": "basic"
@@ -646,7 +567,7 @@
                 "key_code": "o"
               },
               {
-                "key_code": "a"
+                "key_code": "m"
               }
             ],
             "simultaneous_options": {
@@ -673,70 +594,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Activity Monitor.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "c",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Visual Studio Code.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "c"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Visual Studio Code.app'"
+              "shell_command": "open -a 'Spotify.app'"
             }
           ],
           "type": "basic"
@@ -757,7 +615,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'iTerm.app'"
+              "shell_command": "open -a 'Iterm.app'"
             }
           ],
           "type": "basic"
@@ -799,7 +657,133 @@
               }
             },
             {
-              "shell_command": "open -a 'iTerm.app'"
+              "shell_command": "open -a 'Iterm.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "launcher_mode_v4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Calendar.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "mandatory": []
+            },
+            "simultaneous": [
+              {
+                "key_code": "o"
+              },
+              {
+                "key_code": "c"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "launcher_mode_v4",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "launcher_mode_v4",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open -a 'Calendar.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "launcher_mode_v4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": []
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Microsoft Outlook.app'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "mandatory": []
+            },
+            "simultaneous": [
+              {
+                "key_code": "o"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "launcher_mode_v4",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "launcher_mode_v4",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open -a 'Microsoft Outlook.app'"
             }
           ],
           "type": "basic"
