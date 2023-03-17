@@ -1,13 +1,34 @@
 {
-  "title": "CAPS_LOCK to Hyper/Escape, Hyper + i/j/k/l Vim navigation and others.",
+  "title": "CAPS_LOCK to Hyper/Escape (SHIFT+COMMAND+OPTION+CONTROL) & Hyper + VIM Navigation keys",
   "rules": [
     {
-      "description": "CAPS_LOCK to HYPER (SHIFT+COMMAND+OPTION+CONTROL) or ESCAPE (If Alone)",
+      "description": "CMD + W : NOTHING",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "CAPS_LOCK : (HYPER) SHIFT+COMMAND+OPTION+CONTROL or ESCAPE (If Alone)",
       "manipulators": [
         {
           "from": {
             "key_code": "caps_lock",
-            "modifiers": {}
+            "modifiers": {
+              "optional": ["any"]
+            }
           },
           "to": [
             {
@@ -58,7 +79,7 @@
       ]
     },
     {
-      "description": "Toggle caps_lock by pressing left_shift then right_shift",
+      "description": "Toggle CAPS_LOCK with LEFT_SHIFT + RIGHT_SHIFT",
       "manipulators": [
         {
           "from": {
@@ -103,123 +124,7 @@
       ]
     },
     {
-      "description": "Shifts Move Forward and Backward by 1 word",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "right_shift"
-          },
-          "to": [
-            {
-              "key_code": "right_shift"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": ["option"]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "left_shift"
-          },
-          "to": [
-            {
-              "key_code": "left_shift"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": ["option"]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "CMD + W to NOTHING",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "w",
-            "modifiers": {
-              "mandatory": ["left_command"]
-            }
-          },
-          "to": [],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Double tap cmd closes apps",
-      "manipulators": [
-        {
-          "conditions": [
-            {
-              "name": "command-q",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": ["command"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": "left_command"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": ["command"]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "command-q",
-                "value": 1
-              }
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "command-q",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "command-q",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Hyper + SPACE : Toggle Alfred",
+      "description": "CAPS_LOCK + SPACE : Toggle Alfred",
       "manipulators": [
         {
           "from": {
@@ -244,7 +149,7 @@
       ]
     },
     {
-      "description": "Hyper + i/j/k/l == vim directional Keys",
+      "description": "CAPS_LOCK + i/j/k/l == Arrow Keys",
       "manipulators": [
         {
           "from": {
@@ -255,7 +160,8 @@
                 "left_command",
                 "left_control",
                 "left_option"
-              ]
+              ],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -274,7 +180,8 @@
                 "left_command",
                 "left_control",
                 "left_option"
-              ]
+              ],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -293,7 +200,8 @@
                 "left_command",
                 "left_control",
                 "left_option"
-              ]
+              ],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -312,7 +220,8 @@
                 "left_command",
                 "left_control",
                 "left_option"
-              ]
+              ],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -331,459 +240,14 @@
                 "left_command",
                 "left_control",
                 "left_option"
-              ]
+              ],
+              "optional": ["any"]
             }
           },
           "to": [
             {
               "key_code": "right_arrow",
               "modifiers": ["left_command"]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "o Launcher",
-      "manipulators": [
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "n",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Notes.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "n"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Notes.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "s",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Safari.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "s"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Safari.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "r",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Reminders.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "r"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Reminders.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "m",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Spotify.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "m"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Spotify.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "i",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Iterm.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "i"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Iterm.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "c",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Calendar.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "c"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Calendar.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "launcher_mode_v4",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": []
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Microsoft Outlook.app'"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "modifiers": {
-              "mandatory": []
-            },
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "e"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode_v4",
-                    "value": 0
-                  }
-                }
-              ]
-            }
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode_v4",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'Microsoft Outlook.app'"
             }
           ],
           "type": "basic"
