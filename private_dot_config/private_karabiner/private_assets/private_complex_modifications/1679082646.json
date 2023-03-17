@@ -219,47 +219,6 @@
       ]
     },
     {
-      "description": "Hyper + SPACE : Toggle Alfred",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "mandatory": [
-                "left_shift",
-                "left_command",
-                "left_control",
-                "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "spacebar",
-              "modifiers": ["left_command"]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Open Screenshot.app with Print_Screen key",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "print_screen"
-          },
-          "to": [
-            {
-              "shell_command": "open -a screenshot.app"
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
       "description": "Hyper + i/j/k/l == vim directional Keys",
       "manipulators": [
         {
