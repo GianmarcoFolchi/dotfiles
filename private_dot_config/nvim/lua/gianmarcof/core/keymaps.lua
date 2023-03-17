@@ -56,3 +56,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- vimux
 keymap.set("n", "<leader>vp", ":VimuxPromptCommand<CR>")
+keymap.set("n", "<leader>vl", ":VimuxRunLastCommand<CR>")
+keymap.set("n", "<leader>vi", ":<VimuxInspectRunnerCR>")
+keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
