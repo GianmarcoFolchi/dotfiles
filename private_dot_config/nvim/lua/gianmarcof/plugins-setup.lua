@@ -102,7 +102,7 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- auto closing
+	-- auto closing TEST
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
