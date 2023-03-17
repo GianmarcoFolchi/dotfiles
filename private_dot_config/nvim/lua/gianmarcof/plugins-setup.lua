@@ -112,6 +112,9 @@ return packer.startup(function(use)
 	-- Chezmoi integration
 	use("alker0/chezmoi.vim")
 
+	-- Wakatime integration
+	use("wakatime/vim-wakatime")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
