@@ -34,8 +34,8 @@ return packer.startup(function(use)
 
 	--colorscheme
 	--from initial yt video
-	-- use("bluz71/vim-nightfly-guicolors")
-	use("nyoom-engineering/oxocarbon.nvim")
+	use("bluz71/vim-nightfly-guicolors")
+	-- use("nyoom-engineering/oxocarbon.nvim")
 
 	--tmux split window navigation
 	use("christoomey/vim-tmux-navigator")
