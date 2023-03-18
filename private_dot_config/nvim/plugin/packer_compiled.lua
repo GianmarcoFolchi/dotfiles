@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["chezmoi.vim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/chezmoi.vim",
+    url = "https://github.com/alker0/chezmoi.vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -191,6 +196,11 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -216,11 +226,6 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -230,6 +235,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
+  },
+  vimux = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/vimux",
+    url = "https://github.com/preservim/vimux"
   }
 }
 
