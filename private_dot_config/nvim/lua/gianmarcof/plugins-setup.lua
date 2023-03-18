@@ -120,6 +120,14 @@ return packer.startup(function(use)
 	-- Wakatime integration
 	use("wakatime/vim-wakatime")
 
+	-- Terminal Window Toggle
+	use({
+		"s1n7ax/nvim-terminal",
+		config = function()
+			vim.o.hidden = true
+			require("nvim-terminal").setup()
+		end,
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end
