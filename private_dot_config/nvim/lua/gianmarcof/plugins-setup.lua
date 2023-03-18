@@ -32,8 +32,10 @@ return packer.startup(function(use)
 	--lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
-	--preferred colorscheme
-	use("bluz71/vim-nightfly-guicolors")
+	--colorscheme
+	--from initial yt video
+	-- use("bluz71/vim-nightfly-guicolors")
+	use({ "nyoom-engineering/oxocarbon.nvim" })
 
 	--tmux split window navigation
 	use("christoomey/vim-tmux-navigator")
