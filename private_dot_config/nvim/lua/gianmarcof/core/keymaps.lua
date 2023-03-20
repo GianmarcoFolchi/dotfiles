@@ -56,6 +56,8 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 -- restart lsp server (not on youtube nvim video)
 --keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
+-- legendary.nvim keymapping (keybinding manager)
+
 -- vimux
 keymap.set("n", "<leader>vp", ":VimuxPromptCommand<CR>")
 keymap.set("n", "<leader>vl", ":VimuxRunLastCommand<CR>")

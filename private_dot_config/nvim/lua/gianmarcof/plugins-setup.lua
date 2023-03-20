@@ -58,11 +58,20 @@ return packer.startup(function(use)
 	--file explorer
 	use("nvim-tree/nvim-tree.lua")
 
+	--enhanced UI
+	use("stevearc/dressing.nvim")
+
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
+
+	-- status bar
+	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
+
+	-- buffer management
+	use("j-morano/buffer_manager.nvim")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
@@ -132,8 +141,14 @@ return packer.startup(function(use)
 	-- Indent Line
 	use("Yggdroot/indentLine")
 
+	-- Fast Motion
+	use("ggandor/leap.nvim")
+
 	-- Dashboard
-	use("glepnir/dashboard-nvim")
+	-- use("glepnir/dashboard-nvim")
+
+	-- Keybindings
+	use("mrjones2014/legendary.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
