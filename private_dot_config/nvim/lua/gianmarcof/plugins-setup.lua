@@ -68,10 +68,10 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- status bar
-	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
+	-- use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 
 	-- buffer management
-	use("j-morano/buffer_manager.nvim")
+	-- use("j-morano/buffer_manager.nvim")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
