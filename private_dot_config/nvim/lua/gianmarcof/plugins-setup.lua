@@ -133,18 +133,7 @@ return packer.startup(function(use)
 	use("Yggdroot/indentLine")
 
 	-- Dashboard
-	use({
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				-- config
-				theme = "hyper",
-				enable = true,
-			})
-		end,
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
+	use("glepnir/dashboard-nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
