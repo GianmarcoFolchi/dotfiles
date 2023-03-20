@@ -129,8 +129,21 @@ return packer.startup(function(use)
 		end,
 	})
 
-	--Indent Line
+	-- Indent Line
 	use("Yggdroot/indentLine")
+
+	-- Dashboard
+	use({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("dashboard").setup({
+				-- config
+				theme = "hyper",
+			})
+		end,
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
