@@ -140,6 +140,7 @@ return packer.startup(function(use)
 			require("dashboard").setup({
 				-- config
 				theme = "hyper",
+				enable = true,
 			})
 		end,
 		requires = { "nvim-tree/nvim-web-devicons" },
