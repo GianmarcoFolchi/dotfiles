@@ -1,31 +1,39 @@
--- import comment plugin safely
-local setup, buffer_manager = pcall(require, "buffer_manager")
-if not setup then
-	return
-end
--- import telescope actions safely
-local actions_setup, bmui = pcall(require, "buffer_manager.ui")
-if not actions_setup then
-	return
-end
-
-local map = vim.keymap.set
 local opts = { noremap = true }
-
--- enable buffer manager
-buffer_manager.setup({
-
-	defaults = {
-		mappings = {
-			i = {
-				["<leader>b"] = bmui.toggle_quick_menu,
-				["<C-j>"] = bmui.nav_next,
-				["<C-k>"] = bmui.nav_prev,
-			},
+local map = vim.keymap.set
+-- Setup
+require("buffer_manager").setup({
+	select_menu_item_commands = {
+		v = {
+			key = "<C-v>",
+			command = "vsplit",
+		},
+		h = {
+			key = "<C-h>",
+			command = "split",
 		},
 	},
-
-	-- map({ 't', 'n' }, '<leader>b', bmui.toggle_quick_menu, opts)
-	-- map('n', '<C-j>', bmui.nav_next, opts)
-	-- map('n', '<C-k>', bmui.nav_prev, opts)
+	short_file_names = true,
+	short_term_names = true,
 })
+-- Navigate buffers bypassing the menu
+local bmui = require("buffer_manager.ui")
+local keys = "1234567890"
+for i = 1, #keys do
+	local key = keys:sub(i, i)
+	map("n", string.format("<leader>%s", key), function()
+		bmui.nav_file(i)
+	end, opts)
+end
+-- Just the menu
+map({ "t", "n" }, "<<leader>b>", bmui.toggle_quick_menu, opts)
+-- Open menu and search
+map({ "t", "n" }, "<M-m>", function()
+	bmui.toggle_quick_menu()
+	-- wait for the menu to open
+	vim.defer_fn(function()
+		vim.fn.feedkeys("/")
+	end, 50)
+end, opts)
+-- Next/Prev
+map("n", "<C-j>", bmui.nav_next, opts)
+map("n", "<C-k>", bmui.nav_prev, opts)
