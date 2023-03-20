@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
+  ["buffer_manager.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/buffer_manager.nvim",
+    url = "https://github.com/j-morano/buffer_manager.nvim"
+  },
   ["chezmoi.vim"] = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/chezmoi.vim",
@@ -114,10 +124,10 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dashboard-nvim"] = {
+  ["dressing.nvim"] = {
     loaded = true,
-    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -133,6 +143,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
+  },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
+  ["legendary.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/legendary.nvim",
+    url = "https://github.com/mrjones2014/legendary.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
