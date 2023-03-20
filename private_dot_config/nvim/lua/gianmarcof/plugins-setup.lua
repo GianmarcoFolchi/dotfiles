@@ -128,6 +128,10 @@ return packer.startup(function(use)
 			require("nvim-terminal").setup()
 		end,
 	})
+
+	--Indent Line
+	use("Yggdroot/indentLine")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
