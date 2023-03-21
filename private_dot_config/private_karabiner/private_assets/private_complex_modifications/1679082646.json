@@ -338,7 +338,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Notes.app'"
+              "shell_command": "osascript -e 'tell application \"Notes.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -380,7 +380,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Notes.app'"
+              "shell_command": "osascript -e 'tell application \"Notes.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -401,7 +401,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Spotify.app'"
+              "shell_command": "osascript -e 'tell application \"Spotify.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -443,7 +443,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Spotify.app'"
+              "shell_command": "osascript -e 'tell application \"Spotify.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -464,7 +464,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Safari.app'"
+              "shell_command": "osascript -e 'tell application \"Safari.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -506,7 +506,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Safari.app'"
+              "shell_command": "osascript -e 'tell application \"Safari.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -527,7 +527,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Reminders.app'"
+              "shell_command": "osascript -e 'tell application \"Reminders.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -569,7 +569,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Reminders.app'"
+              "shell_command": "osascript -e 'tell application \"Reminders.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -590,7 +590,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Microsoft Outlook.app'"
+              "shell_command": "osascript -e 'tell application \"Microsoft Outlook.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -632,7 +632,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Microsoft Outlook.app'"
+              "shell_command": "osascript -e 'tell application \"Microsoft Outlook.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -653,7 +653,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Calendar.app'"
+              "shell_command": "osascript -e 'tell application \"Calendar.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -695,7 +695,7 @@
               }
             },
             {
-              "shell_command": "open -a 'Calendar.app'"
+              "shell_command": "osascript -e 'tell application \"Calendar.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -716,7 +716,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'iTerm.app'"
+              "shell_command": "osascript -e 'tell application \"iTerm.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
@@ -758,7 +758,7 @@
               }
             },
             {
-              "shell_command": "open -a 'iTerm.app'"
+              "shell_command": "osascript -e 'tell application \"iTerm.app\"' -e 'activate' -e 'end tell'"
             }
           ],
           "type": "basic"
