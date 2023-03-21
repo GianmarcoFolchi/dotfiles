@@ -51,8 +51,8 @@ shift + alt - i : yabai -m window --display next; yabai -m display --focus next
 shift + alt - m : yabai -m window --display previous; yabai -m display --focus previous
 
 # move window to prev and next space
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
+shift + alt - p : yabai -m window --space prev --focus prev;
+shift + alt - n : yabai -m window --space next --focus next;
 
 # move window to space #
 # shift + alt - 1 : yabai -m window --space 1;
