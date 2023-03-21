@@ -45,7 +45,6 @@ keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files wit
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
-keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list available buffers
 
 -- Telescope git commands (not on youtube nvim video)
 --keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
@@ -65,8 +64,16 @@ keymap.set("n", "<leader>vi", ":<VimuxInspectRunnerCR>")
 keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 
 -- buffer_manager
-local bmui = require("buffer_manager.ui")
+-- Navigate buffers bypassing the menu
 local opts = { noremap = true }
+local bmui = require("buffer_manager.ui")
+local keys = "1234567890"
+for i = 1, #keys do
+	local key = keys:sub(i, i)
+	keymap.set("n", string.format("<leader>%s", key), function()
+		bmui.nav_file(i)
+	end, opts)
+end
 keymap.set({ "t", "n" }, "<leader>b", bmui.toggle_quick_menu, opts)
 keymap.set("n", "<M-j>", bmui.nav_next, opts)
 keymap.set("n", "<M-k>", bmui.nav_prev, opts)

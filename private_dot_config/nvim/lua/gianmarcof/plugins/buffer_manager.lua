@@ -5,4 +5,17 @@ if not setup then
 end
 
 -- enable buffer_manager
-buffer_manager.setup()
+buffer_manager.setup({
+	select_menu_item_commands = {
+		v = {
+			key = "<C-v>",
+			command = "vsplit",
+		},
+		h = {
+			key = "<C-h>",
+			command = "split",
+		},
+	},
+	short_file_names = true,
+	short_term_names = true,
+})
