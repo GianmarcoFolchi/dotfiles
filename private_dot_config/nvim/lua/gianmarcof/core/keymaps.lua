@@ -67,8 +67,6 @@ keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 -- buffer_manager
 local bmui = require("buffer_manager.ui")
 local opts = { noremap = true }
--- Just the menu
-keymap.set({ "t", "n" }, "<M-Space>", bmui.toggle_quick_menu, opts)
--- Next/Prev
+keymap.set({ "t", "n" }, "<leader>b", bmui.toggle_quick_menu, opts)
 keymap.set("n", "<M-j>", bmui.nav_next, opts)
 keymap.set("n", "<M-k>", bmui.nav_prev, opts)
