@@ -313,12 +313,6 @@ local no_errors, error_msg = pcall(function()
 	end
 end)
 
---GF test
-vim.api.nvim_command([[
-autocmd FileType buffer_manager vnoremap J :m '>+1<CR>gv=gv
-autocmd FileType buffer_manager vnoremap K :m '<-2<CR>gv=gv
-]])
-
 if not no_errors then
 	error_msg = error_msg:gsub('"', '\\"')
 	vim.api.nvim_command(
