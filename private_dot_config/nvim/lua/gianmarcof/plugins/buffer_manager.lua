@@ -19,8 +19,3 @@ buffer_manager.setup({
 	short_file_names = true,
 	short_term_names = true,
 })
-
-vim.api.nvim_command([[
-autocmd FileType buffer_manager vnoremap J :m '>+1<CR>gv=gv
-autocmd FileType buffer_manager vnoremap K :m '<-2<CR>gv=gv
-]])
