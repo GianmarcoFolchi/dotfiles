@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["buffer_manager.nvim"] = {
+    loaded = true,
+    path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/buffer_manager.nvim",
+    url = "https://github.com/j-morano/buffer_manager.nvim"
+  },
   ["chezmoi.vim"] = {
     loaded = true,
     path = "/Users/gianmarcof/.local/share/nvim/site/pack/packer/start/chezmoi.vim",
