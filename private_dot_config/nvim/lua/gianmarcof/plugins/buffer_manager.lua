@@ -21,6 +21,6 @@ buffer_manager.setup({
 })
 
 vim.api.nvim_command([[
-autocmd FileType buffer_manager vnoremap J :m '>+1<CR>gv=gv
 autocmd FileType buffer_manager vnoremap K :m '<-2<CR>gv=gv
+autocmd FileType buffer_manager vnoremap J :m '>+1<CR>gv=gv
 ]])
