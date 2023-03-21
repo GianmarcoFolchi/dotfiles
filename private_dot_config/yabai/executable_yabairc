@@ -30,3 +30,4 @@ yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^AppCleaner$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
+yabai -m rule --add app="^Facetime$" manage=off
