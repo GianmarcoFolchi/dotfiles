@@ -71,7 +71,10 @@ return packer.startup(function(use)
 	-- use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 
 	-- buffer management
-	use("j-morano/buffer_manager.nvim")
+	-- use("j-morano/buffer_manager.nvim")
+
+	-- Harpoon for buffer management
+	use("ThePrimeagen/harpoon")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
