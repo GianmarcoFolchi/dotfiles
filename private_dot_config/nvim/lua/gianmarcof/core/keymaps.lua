@@ -60,11 +60,11 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 -- vimux
 keymap.set("n", "<leader>vp", ":VimuxPromptCommand<CR>")
 keymap.set("n", "<leader>vl", ":VimuxRunLastCommand<CR>")
-keymap.set("n", "<leader>vi", ":<VimuxInspectRunnerCR>")
+keymap.set("n", "<leader>vi", ":VimuxInspectRunner<CR>")
 keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 
 -- Harpoon buffer management
-keymap.set("n", "<leader>b", "lua require('harpoon.ui').toggle_quick_menu()")
+keymap.set("n", "<leader>b", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
 -- buffer_manager
 -- Navigate buffers bypassing the menu
 -- local opts = { noremap = true }
