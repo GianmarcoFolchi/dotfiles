@@ -73,18 +73,3 @@ for i = 1, #keys do
 	local key = keys:sub(i, i)
 	keymap.set("n", string.format("<leader>%s", key), string.format(':lua require("harpoon.ui").nav_file(%s)<CR>', key))
 end
-
--- buffer_manager
--- Navigate buffers bypassing the menu
--- local opts = { noremap = true }
--- local bmui = require("buffer_manager.ui")
--- local keys = "1234567890"
--- for i = 1, #keys do
--- 	local key = keys:sub(i, i)
--- 	keymap.set("n", string.format("<leader>%s", key), function()
--- 		bmui.nav_file(i)
--- 	end, opts)
--- end
--- keymap.set({ "t", "n" }, "<leader>b", bmui.toggle_quick_menu, opts)
--- keymap.set("n", "<M-j>", bmui.nav_next, opts)
--- keymap.set("n", "<M-k>", bmui.nav_prev, opts)

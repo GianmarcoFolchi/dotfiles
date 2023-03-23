@@ -70,9 +70,6 @@ return packer.startup(function(use)
 	-- status bar
 	-- use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 
-	-- buffer management
-	-- use("j-morano/buffer_manager.nvim")
-
 	-- Harpoon for buffer management
 	use("ThePrimeagen/harpoon")
 
