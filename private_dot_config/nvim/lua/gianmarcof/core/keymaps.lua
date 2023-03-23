@@ -64,7 +64,7 @@ keymap.set("n", "<leader>vi", ":<VimuxInspectRunnerCR>")
 keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 
 -- Harpoon buffer management
-keymap.set("n", "<leader>b", "require('harpoon.ui').toggle_quick_menu()")
+keymap.set("n", "<leader>b", "lua require('harpoon.ui').toggle_quick_menu()")
 -- buffer_manager
 -- Navigate buffers bypassing the menu
 -- local opts = { noremap = true }
