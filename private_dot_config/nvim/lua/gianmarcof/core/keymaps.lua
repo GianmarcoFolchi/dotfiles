@@ -65,6 +65,9 @@ keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 
 -- Harpoon buffer management
 keymap.set("n", "<leader>b", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap.set("n", "<leader>ba", ":lua require('harpoon.ui').add_file()<CR>")
+keymap.set("n", "<leader>bn", ":lua require('harpoon.ui').nav_next()<CR>")
+keymap.set("n", "<leader>bp", ":lua require('harpoon.ui').nav_prev()<CR>")
 local keys = "1234567890"
 for i = 1, #keys do
 	local key = keys:sub(i, i)
