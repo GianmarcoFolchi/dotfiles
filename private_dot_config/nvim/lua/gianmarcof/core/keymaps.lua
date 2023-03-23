@@ -68,6 +68,7 @@ keymap.set("n", "<leader>b", ":lua require('harpoon.ui').toggle_quick_menu()<CR>
 keymap.set("n", "<leader>1", "<nop>")
 keymap.set("n", "<leader>2", "<nop>")
 keymap.set("n", "<leader>3", "<nop>")
+keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
 
 -- local keys = "1234567890"
 -- for i = 1, #keys do
