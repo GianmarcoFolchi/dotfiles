@@ -65,13 +65,16 @@ keymap.set("n", "<leader>vm", ":VimuxZoomRunner<CR>")
 
 -- Harpoon buffer management
 keymap.set("n", "<leader>b", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap.set("n", "<leader>1", "<nop>")
+keymap.set("n", "<leader>2", "<nop>")
+keymap.set("n", "<leader>3", "<nop>")
 
-local keys = "1234567890"
-for i = 1, #keys do
-	local key = keys:sub(i, i)
-	keymap.set("n", string.format("<leader>%s", key), "<nop>")
-	keymap.set("n", string.format("<leader>%s", key), string.format(':lua require("harpoon.ui").nav_file(%s)', key))
-end
+-- local keys = "1234567890"
+-- for i = 1, #keys do
+-- 	local key = keys:sub(i, i)
+-- 	keymap.set("n", string.format("<leader>%s", key), "<nop>")
+-- 	keymap.set("n", string.format("<leader>%s", key), string.format(':lua require("harpoon.ui").nav_file(%s)', key))
+-- end
 
 -- buffer_manager
 -- Navigate buffers bypassing the menu
