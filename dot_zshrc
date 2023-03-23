@@ -12,7 +12,7 @@ alias gs="git status"
 alias mv="mv -i"
 alias ns="npm start" 
 alias nv="nvim"
-
+alias cat="bat"
 bindkey -v
 
 #My Exports
