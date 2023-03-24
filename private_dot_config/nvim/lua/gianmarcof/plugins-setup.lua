@@ -150,6 +150,9 @@ return packer.startup(function(use)
 	-- Keybindings
 	use("mrjones2014/legendary.nvim")
 
+	-- Scroll Bar
+	use("petertriho/nvim-scrollbar")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
