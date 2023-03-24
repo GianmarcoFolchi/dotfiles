@@ -13,7 +13,7 @@ alias mv="mv -i"
 alias ns="npm start" 
 alias nv="nvim"
 alias cat="bat"
-alias zoxide="z"
+alias z="zoxide"
 bindkey -v
 
 #My Exports
