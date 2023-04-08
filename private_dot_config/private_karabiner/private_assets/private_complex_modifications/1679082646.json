@@ -2,6 +2,25 @@
   "title": "CAPS_LOCK to Hyper/Escape, Hyper + i/j/k/l Vim navigation and others.",
   "rules": [
     {
+      "description": "CMD + Q trigger SafeQuitSafari script if in focus",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": """"""""""""""""""""""""""osascript /Users/gianmarcof/Documents/Personal/Programming/Scripts/safeQuitSafari.scpt""""
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "CAPS_LOCK to HYPER (SHIFT+COMMAND+OPTION+CONTROL) or ESCAPE (If Alone)",
       "manipulators": [
         {
