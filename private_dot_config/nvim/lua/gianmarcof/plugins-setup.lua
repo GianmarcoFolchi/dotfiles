@@ -140,6 +140,7 @@ return packer.startup(function(use)
 
 	-- Indent Line
 	use("Yggdroot/indentLine")
+	vim.api.nvim_command("autocmd Filetype json let g:indentLine_setConceal = 0")
 
 	-- Fast Motion
 	use("ggandor/leap.nvim")
