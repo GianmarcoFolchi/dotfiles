@@ -7,4 +7,4 @@ end
 -- enable indentLine
 indentLine.setup()
 
-vim.api.nvim_command("autocmd Filetype json let g:indentLine_enabled = 0")
+vim.api.nvim_command("autocmd Filetype json let g:indentLine_setConceal = 0")
