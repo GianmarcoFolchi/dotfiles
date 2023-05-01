@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cookie</key>
+	<string>NEXT_LOCALE=en-US; intercom-id-gpfdrxfd=45efc285-ecfa-4063-a45d-57ce6291e7f6; token_v2=57d2c9295dd18b576995d0d69c0c394df4d2b8874e091823ae15b899bc06aec7044f7182d05e23590324c68b9c9ce000fe07e72db99843ef22eae529b5706daf27c939cc7d7be1ea4656549b5f1d; notion_user_id=cfc7a6a3-35ee-4b23-9699-f71efa8668bc; notion_cookie_consent={%22id%22:%2241a41c09-f7fc-4b6c-8e6b-784d566ba7e0%22%2C%22permission%22:{%22necessary%22:true%2C%22targeting%22:false%2C%22preference%22:true%2C%22performance%22:false}}; notion_experiment_device_id=9bc99b64-0d1a-458c-89b1-d9ec76c3cb80; notion_users=[%22cfc7a6a3-35ee-4b23-9699-f71efa8668bc%22]; notion_check_cookie_consent=false; __cf_bm=c_5KvrAqqVJaovo2VJuNR0nzo_CUQYDIfQkkPuJKXBc-1669760966-0-Ac01O991ZTQqqIpIJvsC8Z7OytvHMZcAsiuszkHblbjgSnu5DwaDE9JHuxI/T2kdDv07zsu1Rokm9jF8k/GXvvc=; intercom-device-id-gpfdrxfd=ebfb3505-99ce-48c2-a208-2a493363a187; notion_locale=en-US/autodetect; intercom-session-gpfdrxfd=SEJ2eGhPSGU5YU1GRzBCc1Z6S3N1QUFnUGNpdGNBb2x2ZFF6K1RSV3VqclFvc3FkZ09PWjl1Y2FlWjhEK1B6bi0tYkh1VzR6QVVNcVJkUVZWZGNRRTdyQT09--79d5b11d15c87cdd45de4e5c8c3f035010cba195</string>
+	<key>notionSpaceId</key>
+	<string>bb0e9378-f274-4196-8470-c9f0458bbecb</string>
+	<key>useDesktopClient</key>
+	<true/>
+</dict>
+</plist>

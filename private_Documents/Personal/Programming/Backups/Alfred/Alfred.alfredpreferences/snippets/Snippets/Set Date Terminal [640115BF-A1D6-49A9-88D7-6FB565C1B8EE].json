@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "sudo date -u 0314210920",
+    "uid" : "640115BF-A1D6-49A9-88D7-6FB565C1B8EE",
+    "name" : "Set Date Terminal",
+    "keyword" : ":tpd"
+  }
+}
