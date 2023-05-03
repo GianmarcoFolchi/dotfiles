@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "ssh gi543210@eustis3.eecs.ucf.edu",
-    "uid" : "10514822-0535-4222-A61C-DAFEB9D40909",
-    "name" : "SSH into Eustis",
-    "keyword" : ":eustis"
-  }
-}
