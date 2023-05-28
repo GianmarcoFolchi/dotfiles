@@ -29,7 +29,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript ~/Documents/Personal/Programming/Scripts/SafariSafeQuit/safe_quit_safari_if_focus.scpt"
+                    "shell_command": "osascript ~/scripts/safe_quit_safari_if_focus.scpt"
                   }
                 ],
                 "type": "basic"
