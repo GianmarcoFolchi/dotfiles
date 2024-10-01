@@ -16,6 +16,8 @@ alias c="clear"
 alias t="tmux"
 alias ta="tmux attach"
 alias gc="git checkout"
+alias tmuxDev="tmux attach -t dev"
+
 bindkey -v
 #My Exports
 export EDITOR='/opt/homebrew/bin/nvim'
@@ -26,6 +28,8 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Pinterest spacific, request cert when needed 
 GIT_SSH_COMMAND="gironde ssh"
+
+# See https://phabricator.pinadmin.com/D90531
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -133,3 +137,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
