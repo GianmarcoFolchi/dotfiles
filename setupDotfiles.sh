@@ -1,5 +1,8 @@
 #!/bin/bash  
-  
+# Install using CURL: sh -c "$(curl -fsSL https://raw.githubusercontent.com/GianmarcoFolchi/dotfiles/refs/heads/master/setupDotfiles.sh)"  
+
+#Using wget sh -c "$(wget -qO- https://raw.githubusercontent.com/GianmarcoFolchi/dotfiles/refs/heads/master/setupDotfiles.sh)"  
+
 set -e  # Exit immediately if a command exits with a non-zero status  
   
 install_if_missing() {  
