@@ -39,6 +39,7 @@ cd ~
 install_if_missing "curl"
 install_if_missing "git"
 install_if_missing "zsh"
+install_if_missing "bat"
 
 # Install Oh My Zsh if not already installed; avoid any potential prompts
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
@@ -52,12 +53,15 @@ if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 fi
 
+<<<<<<< HEAD
 # Clone you-should-use
 if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]]; then
   echo "Installing you-should-use..."
   git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
 fi
 
+=======
+>>>>>>> 994fbcd (Modified setup to install bat)
 # Clone zsh-autosuggestions
 if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]]; then
   echo "Installing zsh-autosuggestions..."
