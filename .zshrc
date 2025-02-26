@@ -3,6 +3,11 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Source local .zshrc if it exists
+if [ -f ~/.zshrc.local ]; then
+    . ~/.zshrc.local
+fi
+
 alias find="fd"
 alias gs="git status"
 alias glog="git log --all --graph --decorate"
@@ -11,23 +16,17 @@ alias ns="npm start"
 alias nv="nvim"
 alias cat="bat"
 alias z="zoxide"
-# alias rm="trash"
 alias c="clear"
 alias t="tmux"
 alias ta="tmux attach"
-alias gc="git checkout"
 alias tmuxDev="tmux attach -t dev"
 
 bindkey -v
 #My Exports
-export EDITOR='/opt/homebrew/bin/nvim'
-export VISUAL='/opt/homebrew/bin/nvim'
+export EDITOR='/opt/homebrew/bin/code'
+export VISUAL='/opt/homebrew/bin/code'
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-
-# Pinterest spacific, request cert when needed 
-GIT_SSH_COMMAND="gironde ssh"
 
 # See https://phabricator.pinadmin.com/D90531
 
@@ -127,15 +126,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
