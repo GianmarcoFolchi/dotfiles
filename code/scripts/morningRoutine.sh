@@ -1,4 +1,6 @@
 #!/bin/bash
+PATH=$PATH:/usr/local/bin
+
 function performMorningRoutine {
   openArc && oktaLogin && vpnOn && githubLogin && girondeSignIn && runCaffeinateInTmux && sendNotification
 }
@@ -66,21 +68,21 @@ EOF
 function githubLogin {
   openTabInArc "https://github.com/pinternal"
   osascript <<EOF
-tell application "Arc"
-    tell front window
-        tell active tab
-            execute javascript "
-                var button = Array.from(document.querySelectorAll('button[type=\"submit\"]'))
-                    .find(b => b.textContent.trim() === 'Continue');
-                if (button) {
-                    button.click();
-                }
-            "
+    tell application "Arc"
+        tell front window
+            tell active tab
+                execute javascript "
+                    var button = Array.from(document.querySelectorAll('button[type=\"submit\"]'))
+                        .find(b => b.textContent.trim() === 'Continue');
+                    if (button) {
+                        button.click();
+                    }
+                "
+            end tell
         end tell
     end tell
-end tell
 EOF
-closeActiveTabInArc
+  closeActiveTabInArc
 }
 
 function girondeSignIn {

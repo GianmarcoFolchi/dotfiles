@@ -5,19 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "left_control + x will run performMorningRoutine in terminal",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": { "mandatory": ["left_control"] }
-                                },
-                                "to": [{ "shell_command": "source ~/code/scripts/morningRoutine.sh && performMorningRoutine" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "CAPS_LOCK to HYPER (SHIFT+COMMAND+OPTION+CONTROL) or ESCAPE (If Alone)",
                         "manipulators": [
                             {

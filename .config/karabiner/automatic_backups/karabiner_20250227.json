@@ -12,7 +12,7 @@
                                     "key_code": "x",
                                     "modifiers": { "mandatory": ["left_control"] }
                                 },
-                                "to": [{ "shell_command": "source ~/code/scripts/morningRoutine.sh && performMorningRoutine" }],
+                                "to": [{ "shell_command": "source ~/.zshrc && performMorningRoutine" }],
                                 "type": "basic"
                             }
                         ]
