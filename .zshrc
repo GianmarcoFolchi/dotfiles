@@ -20,10 +20,20 @@ alias t="tmux"
 alias ta="tmux attach"
 alias tmuxDev="tmux attach -t dev"
 
+gitBranches() {
+  git reflog show --pretty=format:'%gs ~ %gd' --date=relative \
+    | grep 'checkout:' \
+    | grep -oE '[^ ]+ ~ .*' \
+    | awk -F~ '!seen[$1]++' \
+    | head -n 10 \
+    | awk -F' ~ HEAD@{' '{printf(" %12s:\t%s\n", substr($2, 1, length($2) - 1), $1)}'
+}
+
+
 bindkey -v
 #My Exports
-export EDITOR='/opt/homebrew/bin/code'
-export VISUAL='/opt/homebrew/bin/code'
+export EDITOR='/opt/homebrew/bin/nvim'
+export VISUAL='/opt/homebrew/bin/nvim'
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 

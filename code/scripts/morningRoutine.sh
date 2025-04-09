@@ -30,6 +30,7 @@ function oktaLogin {
     end tell
 EOF
   )
+  sleep 5
   [[ "$clickNextButton" == "true" ]] && sleep 12
   sleep 5
   closeActiveTabInArc
@@ -38,6 +39,7 @@ EOF
 # NOTE: GlobalProtect must be running.
 # REF: https://gist.github.com/kaleksandrov/3cfee92845a403da995e7e44ba771183
 function vpnOn {
+  sleep 5
   osascript <<EOF
     tell application "System Events" to tell process "GlobalProtect"
         if not (exists window 1) then click menu bar item 1 of menu bar 2  # activate GlobalProtect menubar window
@@ -63,6 +65,7 @@ function vpnOn {
         if exists window 1 then click menu bar item 1 of menu bar 2  # close GlobalProtect menubar window
     end tell
 EOF
+sleep 5
 }
 
 function githubLogin {
@@ -82,6 +85,7 @@ function githubLogin {
         end tell
     end tell
 EOF
+  sleep 5
   closeActiveTabInArc
 }
 
